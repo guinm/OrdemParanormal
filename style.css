@@ -33,3 +33,13 @@ body div.bg {
     color: white;
 	width: 150px;
 }
+
+.crt span {
+	font-size: 7vw;
+	color: white;
+	position: absolute;
+	left: 32vw;
+	top: 40vh;
+	transform: rotate(-30deg);
+	opacity: 0.7;
+}
