@@ -1,5 +1,6 @@
 body {
-	background-color: #000000BB;
+	background-color: #000000BB !important;
+	margin: 0px;
 }
 
 body div.bg {
@@ -35,11 +36,21 @@ body div.bg {
 }
 
 .crt span {
+	font-family: 'IAZDIS+OutroLado-Regular';
 	font-size: 7vw;
 	color: white;
 	position: absolute;
 	left: 32vw;
-	top: 40vh;
+	top: 42vh;
 	transform: rotate(-30deg);
 	opacity: 0.7;
+}
+
+.menu {
+	position: sticky;
+	height: 50px;
+	width: 100%;
+	margin: 0px;
+	background-color: white;
+	z-index: 10;
 }
