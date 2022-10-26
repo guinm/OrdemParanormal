@@ -1,3 +1,5 @@
+ @font-face { font-family: Estrangeiro; src: url('/assets/fonts/OutroLado_Regular.ttf'); } 
+
 body {
 	background-color: #000000BB !important;
 	margin: 0px;
@@ -36,7 +38,7 @@ body div.bg {
 }
 
 .crt span {
-	font-family: 'IAZDIS+OutroLado-Regular';
+	font-family: Estrangeiro;
 	font-size: 7vw;
 	color: white;
 	position: absolute;
