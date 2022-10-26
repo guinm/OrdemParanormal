@@ -21,12 +21,15 @@ body div.bg {
 	width: 90vw;
 	background-color: #dfdfd0;
 	margin: 15px auto; 
+	position: relative;
+	z-index: 10;
 }
 
-#heads div {
+#heads div.btn {
 	font: 22px Arial;
     display: inline-block;
-    padding: 1em 2em;
+    line-height: 50px;
     text-align: center;
     color: white;
+	width: 150px;
 }
