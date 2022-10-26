@@ -1,4 +1,4 @@
- @font-face { font-family: Estrangeiro; src: url('/assets/fonts/OutroLado_Regular.ttf'); } 
+ @font-face { font-family: Estrangeiro; src: url('OutroLado_Regular.ttf'); } 
 
 body {
 	background-color: #000000BB !important;
@@ -42,7 +42,7 @@ body div.bg {
 	font-size: 7vw;
 	color: white;
 	position: absolute;
-	left: 37vw;
+	left: 32vw;
 	top: 42vh;
 	transform: rotate(-30deg);
 	opacity: 0.7;
