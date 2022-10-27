@@ -1,5 +1,11 @@
- @font-face { font-family: Estrangeiro; src: url('OutroLado_Regular.ttf'); } 
- @font-face { font-family: Datilografado; src: url('Datilografado.ttf'); } 
+@font-face { font-family: Estrangeiro; src: url('assets/fonts/OutroLado_Regular.ttf'); } 
+@font-face { font-family: Ordem; src: url('assets/fonts/Ordem.ttf'); } 
+
+:root {
+  --ENERGIA: #9a00fd;
+  --CONHECIMENTO: #bf9100;
+  --SANGUE: #b1161a;
+}
 
 body {
 	background-color: #000000BB !important;
@@ -56,7 +62,7 @@ body div.bg {
 	width: 50px;
 	border-radius: 50px;
 	border: none;
-	z-index: 0;
+	z-index: 10;
 	transition: 1s;
 	margin: 15px;
 	overflow: hidden;
@@ -69,8 +75,31 @@ body div.bg {
 	border: none;
 	margin: 0px;
 	float: right;
-	background-color: red;
 	z-index: 15;
+	background-image: url("assets/img/ORDO.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#menu button:hover {
+	animation: elementos 5s infinite;
+}
+
+@keyframes elementos {
+	0% {
+		background-color: white;
+	} 20% {
+		background-color: black;
+	} 40% {
+		background-color: var(--SANGUE);
+	} 60% {
+		background-color: var(--CONHECIMENTO);
+	} 80% {
+		background-color: var(--ENERGIA);
+	} 100% {
+		background-color: white;
+	}
 }
 
 #menu.open button {
@@ -90,13 +119,33 @@ body div.bg {
 }
 
 #opc1, #opc2, #opc3 {
-	font-family: Datilografado;
+	font-family: Ordem;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 22px;
 	line-height: 50px;
 	height: 50px;
 	padding: 0px 15px;
-	background-color: blue;
-	color: white;
+	margin-left: 10px;
+}
+
+#opc1:hover, #opc2:hover, #opc3:hover {
+	font-weight: bold;
+	animation: elementos_sombra 5s infinite;
+}
+
+@keyframes elementos_sombra {
+	0% {
+		text-shadow: 0px 0px 5px white;
+	} 20% {
+		text-shadow: 0px 0px 5px black;
+	} 40% {
+		text-shadow: 0px 0px 5px var(--SANGUE);
+	} 60% {
+		text-shadow: 0px 0px 5px var(--CONHECIMENTO);
+	} 80% {
+		text-shadow: 0px 0px 5px var(--ENERGIA);
+	} 100% {
+		text-shadow: 0px 0px 5px white;
+	}
 }
