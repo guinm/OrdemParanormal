@@ -1,5 +1,5 @@
  @font-face { font-family: Estrangeiro; src: url('OutroLado_Regular.ttf'); } 
- @font-face { font-family: Datilografado; src: url('assets/fonts/Datilografado.ttf'); } 
+ @font-face { font-family: Datilografado; src: url('Datilografado.ttf'); } 
 
 body {
 	background-color: #000000BB !important;
@@ -90,7 +90,7 @@ body div.bg {
 }
 
 #opc1, #opc2, #opc3 {
-	font-family: 'CGSCXP+GabrieleBadAH' !important;
+	font-family: Datilografado;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 22px;
