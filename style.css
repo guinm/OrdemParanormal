@@ -1,4 +1,5 @@
  @font-face { font-family: Estrangeiro; src: url('OutroLado_Regular.ttf'); } 
+ @font-face { font-family: Datilografado; src: url('assets/fonts/Datilografado.ttf'); } 
 
 body {
 	background-color: #000000BB !important;
@@ -48,11 +49,54 @@ body div.bg {
 	opacity: 0.7;
 }
 
-.menu {
+#menu {
 	position: sticky;
+	background-color: #ffffffcc;
 	height: 50px;
-	width: 100%;
+	width: 50px;
+	border-radius: 50px;
+	border: none;
+	z-index: 0;
+	transition: 1s;
+	margin: 15px;
+	overflow: hidden;
+}
+
+#menu button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: none;
 	margin: 0px;
-	background-color: white;
-	z-index: 10;
+	float: right;
+	background-color: red;
+	z-index: 15;
+}
+
+#menu.open button {
+	width: 50px;
+}
+
+#menu.open {
+	width: calc(100% - 30px);
+	border-radius: 50px;
+}
+
+#opcs {
+	position: absolute;
+	left: calc(25vw - 30px);
+	width: 50vw;
+	text-align: center;
+}
+
+#opc1, #opc2, #opc3 {
+	font-family: Datilografado !important;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 22px;
+	line-height: 50px;
+	height: 50px;
+	padding: 0px 15px;
+	background-color: blue;
+	color: white;
 }
