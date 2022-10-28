@@ -140,12 +140,12 @@ body div.bg {
 
 #menu {
 	position: absolute;
-	background-color: #ffffffcc;
+	background-color: #ffffffe;
 	height: 50px;
 	width: 50px;
 	border-radius: 25px;
 	border: none;
-	z-index: 10;
+	z-index: 50;
 	transition: 0.5s height, width 0.5s;
 	transition-delay: 0s, 0.5s;
 	top: 15px;
