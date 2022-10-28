@@ -60,7 +60,7 @@ body div.bg {
 }
 
 #menu {
-	position: sticky;
+	position: absolute;
 	background-color: #ffffffcc;
 	height: 50px;
 	width: 50px;
@@ -69,7 +69,8 @@ body div.bg {
 	z-index: 10;
 	transition: 1s height, width 1s;
 	transition-delay: 0s, 1.1s;
-	margin: 15px;
+	top: 15px;
+	left: 15px;
 	overflow: hidden;
 }
 
@@ -159,43 +160,169 @@ body div.bg {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width : 480px or min-width : 320px) {
-	#menu.open {
-		width: calc(100vw - 30px);
-	}
+#EleMonstro {
+	padding: 5px;
+	width: 80vw;
+	margin: 5% 8% 0% 8%	;
+	background-color: white;
+	text-align: center;
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-	#menu.open {
-		width: calc(100vw - 30px);
-	}
+#EleMonstro div {
+	position: relative;
+	width: calc(50% - 5px);
+	height: 25vh;
+	min-width: 450px;
+	display: inline-block;
+	transition: filter 0.5s;
+	color: white;
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
+#CONHECIMENTO, #ENERGIA {
+	top: 5px;
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+#MEDO {
+	top: 10px;
+}
+
+#EleMonstro #MEDO {
+	width: 100%;
+}
+
+#MORTE .bg, #SANGUE .bg, #ENERGIA .bg, #CONHECIMENTO .bg{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-size: cover;
+	opacity: 0.85;
+}
+
+#MORTE .bg{
+	background-image: url(assets/img/bestiario/morte/Deus_da_Morte.jpg);
+	background-position: 0% 10%;
 	
 }
+
+#SANGUE .bg{
+	background-image: url(assets/img/bestiario/sangue/Diabo.jpg);
+	background-position: 50% 42%;
+	background-size: cover;
+}
+
+#CONHECIMENTO .bg{
+	background-image: url(assets/img/bestiario/conhecimento/Mascara_do_desespero.jpg);
+	background-position: 0% 10%;
+	background-size: cover;
+}
+
+#ENERGIA .bg{
+	background-image: url(assets/img/bestiario/energia/4nf1tr140.jpg);
+	background-position: 50% 42%;
+	background-size: 150%;
+	transition: 1ms;
+}
+
+#MORTE .content, #SANGUE .content, #CONHECIMENTO .content, #ENERGIA .content {
+	position: relative;
+	z-index: 5;
+	line-height: 25vh;
+	vertical-align: middle;
+	font-size: 50px;
+	font-family: Ordem;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+#MORTE:hover .bg, #SANGUE:hover .bg, #CONHECIMENTO:hover .bg{
+	filter: blur(2px);
+}
+
+#ENERGIA:hover .bg {
+	animation: anfitriao 1.422222s infinite;
+}
+
+@keyframes anfitriao {
+	0% {
+		background-position: 50% 20%;
+	} 20% {
+		background-position: 10% 0%;
+	} 40% {
+		background-position: 60% 30%;
+	} 60% {
+		background-position: 42% 42%;
+	} 80% {
+		background-position: 100% 92%;
+	} 100 % {
+		background-position: 12% 95%;
+	}
+}
+
+#EleMonstro div:hover .content {
+	opacity: 1;
+}
+
+#MORTE .content {
+	color: black;
+	text-shadow: 0px 0px 4px white;
+}
+
+#SANGUE .content {
+	color: var(--SANGUE)	;
+	text-shadow: 0px 0px 4px white;
+}
+
+#CONHECIMENTO .content {
+	color: var(--CONHECIMENTO);
+	text-shadow: 0px 0px 4px black;
+}
+
+#ENERGIA .content {
+	color: var(--ENERGIA);
+	text-shadow: 0px 0px 4px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
