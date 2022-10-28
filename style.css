@@ -12,6 +12,10 @@ body {
 	margin: 0px;
 }
 
+a {
+	color: black;
+}
+
 body div.bg {
 	top: 25vh;
 	left: 25vw;
@@ -65,7 +69,6 @@ body div.bg {
 	z-index: 10;
 	transition: 1s height, width 1s;
 	transition-delay: 0s, 1.1s;
-	
 	margin: 15px;
 	overflow: hidden;
 }
@@ -120,7 +123,7 @@ body div.bg {
 #opcs {
 	position: absolute;
 	left: 0px;
-	width: 300px;
+	width: 275px;
 	text-align: center;
 }
 
@@ -154,4 +157,45 @@ body div.bg {
 	} 100% {
 		text-shadow: 0px 0px 5px white;
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width : 480px or min-width : 320px) {
+	#menu.open {
+		width: calc(100vw - 30px);
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#menu.open {
+		width: calc(100vw - 30px);
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
 }
