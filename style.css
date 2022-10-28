@@ -375,7 +375,51 @@ body div.bg {
 	text-shadow: 0px 0px 4px white;
 }
 
+.polaroid {
+	cursor: pointer;
+	position: absolute;
+	z-index: 10;
+	width: 350px;
+	height: 420px;
+	background-color: white;
+	box-shadow: 0px 0px 4px gray;
+}
 
+.polaroid .img {
+	width: 310px;
+	height: 310px;
+	margin: 20px;
+}
+
+.polaroid.arsenal {
+	top: 135px;
+	left: 50px;
+	transform: rotate(-20deg);
+}
+
+.polaroid.arsenal .img {
+	background-image: url(assets/img/ordem/arsenal.jpg);
+	background-size: 400px;
+	background-position: -50px;
+}
+
+.polaroid.ocultismo {
+	top: 545px;
+	left: 113px;
+	transform: rotate(15deg);
+}
+
+.polaroid.ocultismo .img {
+	background-image: url(assets/img/ordem/sala_ocultismo.jpg);
+	background-size: 400px;
+	background-position: -35px;
+}
+
+.polaroid .text {
+	font-family: Ordem;
+	font-size: 32px;
+	text-align: center;
+}
 
 
 
