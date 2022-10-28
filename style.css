@@ -249,7 +249,7 @@ body div.bg {
 #EleMonstro div {
 	position: relative;
 	width: calc(50% - 5px);
-	height: 25vh;
+	height: 33vh;
 	min-width: 450px;
 	display: inline-block;
 	transition: filter 0.5s;
@@ -258,6 +258,7 @@ body div.bg {
 
 #CONHECIMENTO, #ENERGIA {
 	top: 5px;
+	margin-bottom: 5px;
 }
 
 #MEDO {
@@ -341,9 +342,9 @@ body div.bg {
 	} 79 {
 		background-position: 42% 42%;
 	} 80% {
-		background-position: 100% 92%;
+		background-position: 25% 92%;
 	} 99% {
-		background-position: 100% 92%;
+		background-position: 25% 92%;
 	} 100 % {
 		background-position: 12% 95%;
 	}
@@ -429,6 +430,7 @@ body div.bg {
 	
 	#ENERGIA {
 		top: 15px;
+		margin-bottom: 15px;
 	}
 	
 	#EleMonstro #MEDO {
