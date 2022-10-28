@@ -192,9 +192,7 @@ body div.bg {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-	#menu.open {
-		width: calc(100vw - 30px);
-	}
+
 }
 
 /* Large Devices, Wide Screens */
