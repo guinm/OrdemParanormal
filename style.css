@@ -46,6 +46,16 @@ a {
 	animation: shake 0.3s infinite;
 }
 
+.haha1 {
+	top: 15%; 
+	left: -15%;
+}
+
+.haha2 {
+	bottom: 15%; 
+	right: -15%;
+}
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, -1px, 0) rotate(-45deg);
@@ -444,6 +454,16 @@ body div.bg {
 	
 	.haha {
 		filter: rotate(-45deg);
+	}
+	
+	.haha1 {
+		top: -50px;
+		left: -100px;
+	}
+	
+	.haha2 {
+		bottom: 50px;
+		right: -100px;
 	}
 	
 	#menu.open {
