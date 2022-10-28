@@ -431,10 +431,21 @@ body div.bg {
 	text-align: center;
 }
 
+.polaroid.arsenal img {
+	position: absolute;
+	top: 85px;
+	left: 25px;
+	opacity: 0.5;
+	transform: rotate(-50deg);
+}
 
-
-
-
+.polaroid.ocultismo img {
+	position: absolute;
+	top: 95px;
+	left: 23px;
+	opacity: 0.5;
+	transform: rotate(42deg);
+}
 
 
 
