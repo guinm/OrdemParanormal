@@ -105,7 +105,7 @@ a {
   }
 }
 
-body div.bg {
+body .crt .bg {
 	top: 25vh;
 	left: 25vw;
 	position: absolute;
@@ -135,6 +135,19 @@ body div.bg {
     text-align: center;
     color: white;
 	width: 150px;
+}
+
+.crt {
+	position: absolute;
+	z-index: -100;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0.5;
+	top: 0px;
+	left: 0px;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .crt span {
@@ -178,6 +191,7 @@ body div.bg {
 	background-size: contain;
 }
 
+/*
 #menu button:hover {
 	animation: elementos 5s infinite;
 }
@@ -197,6 +211,7 @@ body div.bg {
 		background-color: white;
 	}
 }
+*/
 
 #menu.open button {
 	width: 50px;
@@ -447,17 +462,112 @@ body div.bg {
 	transform: rotate(42deg);
 }
 
+table {
+	overflow: hidden;
+	margin: 50px;
+	margin-left: 15px;
+	background-color: #FFFFFFEE;
+	float:left;
+}
 
+thead tr .nome {
+	width: 110px;
+}
 
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+}
 
+.tg td{
+	border-color:black;
+	border-width:1px;
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	padding:9px 20px;
+	word-break:normal;
+}
 
+.tg th{
+	
+	border-color:black;
+	border-style:solid;
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	overflow:hidden;
+	padding:9px 20px;
+	word-break:normal;
+	color: var(--SANGUE);
+	font-weight: bold;
+ }
+ 
+ td.no_bot {
+	 border-bottom: 0px;
+ }
+ 
+ td.no_top {
+	 border-top: 0px;
+ }
 
+td.no_bot, td.no_top {
+	font-style: italic;
+	font-weight: bold;
+}
 
+thead {
+	border-bottom: 5px solid var(--SANGUE);
+}
 
+thead tr, thead tr th {
+	border: 0px;
+}
 
+tbody tr:not(.munic) td:first-of-type {
+	text-align: left;
+	font-weight: bold;
+}
 
+tbody tr td {
+	text-align: center;
+}
+
+tbody, tr {
+	border-left: 0px;
+}
+
+tr:hover {
+  background-color: white;
+  
+}
+
+td, th {
+  position: relative;
+}
+
+td:not(.no_top, .no_bot):hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td.no_top {
+
+	border-bottom: solid 1px black;
+	color: var(--CONHECIMENTO);
+}
 
 @media only screen and (max-width: 680px) {
+	html {
+		max-width: 100vw;
+	}
+	
 	.text-404 {
 		margin-top: 25vh;
 		width: 90vw;
@@ -512,7 +622,26 @@ body div.bg {
 	#EleMonstro #MEDO {
 		top: 20px;
 	}
+	
+	table {
+		font-size: 12px !important;
+		margin: 0px;
+		max-width: 100vw;
+		margin-top: 65px;
+	}
+	
+	.tg th {
+		font-size: 12px;
+		padding: 10px 3px;
+	}
+	
+	.tg td {
+		font-size: 10px;
+		padding: 4px 2px;
+	}
 }
+
+
 
 
 
