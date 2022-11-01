@@ -10,6 +10,12 @@
 body {
 	background-color: #000000BB !important;
 	margin: 0px;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -438,6 +444,19 @@ body .crt .bg {
 	background-image: url(assets/img/ordem/sala_ocultismo.jpg);
 	background-size: 400px;
 	background-position: -35px;
+}
+
+.polaroid.credito {
+	bottom: -413px;
+	left: 113px;
+	margin: 13px;
+	transform: rotate(13deg);
+}
+
+.polaroid.credito .img {
+	background-image: url(https://i.pinimg.com/564x/5a/e5/27/5ae52768effb118485a523f1f9b83448.jpg);
+	background-size: 400px;
+	background-position: -42px -10px;
 }
 
 .polaroid .text {
