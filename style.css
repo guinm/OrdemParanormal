@@ -704,7 +704,10 @@ td.no_top {
 	}
 	
 	.polaroid.credito {
-		bottom: -813px;
+		bottom: -913px;
+		right: 13px;
+		margin: 13px;
+		transform: rotate(-13deg);
 	}
 }
 
