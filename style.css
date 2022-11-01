@@ -696,6 +696,12 @@ td.no_top {
 		font-size: 10px;
 		padding: 4px 2px;
 	}
+	
+	.creditos {
+		padding: 25px;
+		font-size: 18px;
+		width: calc(100vw - 50px);
+	}
 }
 
 
