@@ -702,6 +702,10 @@ td.no_top {
 		font-size: 18px;
 		width: calc(100vw - 50px);
 	}
+	
+	.polaroid.credito {
+		bottom: -813px;
+	}
 }
 
 
