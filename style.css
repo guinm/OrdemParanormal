@@ -725,7 +725,7 @@ td.no_top {
 		right: -100px;
 	}
 	
-	#menu.open {
+	#menu.open, #extra_ars.open {
 		width: calc(100vw - 5px);
 	}
 	
