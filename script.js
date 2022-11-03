@@ -6,9 +6,18 @@ $('ul li').on('click', function() {
 function OpenMenu() {
   var element = document.getElementById("menu");
   element.classList.toggle("open");
+  var bt = document.getElementById("extra_ars");
+  
+  if (bt.classList.contains("open")) {
+	  bt.classList.toggle("open");
+  }
 }
 
 function OpenArsenal() {
   var element = document.getElementById("extra_ars");
+  var bt = document.getElementById("menu");
   element.classList.toggle("open");
+  if (bt.classList.contains("open")) {
+	  bt.classList.toggle("open");
+  }
 }
