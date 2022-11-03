@@ -849,6 +849,16 @@ td.no_top {
 		transform: rotate(-13deg);
 	}
 	
+	.table.half div {
+		width: 100vw !important;
+		margin: 0px !important;
+		clear: both;
+	}
+	
+	.table.half div table {
+		width: 100%;
+		margin: 0px;
+	}
 }
 
 
