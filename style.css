@@ -12,6 +12,7 @@ body {
 	margin: 0px;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;
+	overflow: scroll;
 }
 
 body::-webkit-scrollbar {
@@ -168,25 +169,25 @@ body .crt .bg {
 }
 
 #menu {
+	border-right: 5px solid var(--CONHECIMENTO) !important;
+}
+
+#menu, #extra_ars {
 	position: absolute;
 	background-color: #ffffffee;
 	height: 50px;
 	width: 50px;
-	border-radius: 25px;
 	border: none;
 	z-index: 50;
 	transition: 0.5s height, width 0.5s;
 	transition-delay: 0s, 0.5s;
-	top: 15px;
-	left: 15px;
 	overflow: hidden;
 }
 
-#menu button {
+#menu button, #extra_ars button {
 	position: relative;
 	width: 50px;
 	height: 50px;
-	border-radius: 50px;
 	border: none;
 	margin: 0px;
 	float: right;
@@ -195,6 +196,7 @@ body .crt .bg {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	cursor: pointer;
 }
 
 /*
@@ -226,7 +228,6 @@ body .crt .bg {
 #menu.open {
 	width: 300px;
 	height: 150px;
-	border-radius: 25px;
 	transition: width 0.5s, height 0.5s;
 	transition-delay: 0s, 0.5s;
 }
@@ -268,6 +269,39 @@ body .crt .bg {
 	} 100% {
 		text-shadow: 0px 0px 5px white;
 	}
+}
+
+#extra_ars {
+	display: none;
+	width: 100px;
+	background-image: none;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;
+	border-left: 5px solid var(--ENERGIA);
+}
+
+#extra_ars button{
+	display: inline-block;
+	font-family: Estrangeiro;
+	font-size: 22px;
+	background-image: none;
+	width: 100%;
+	float: none;
+}
+
+#extra_ars.open {
+	width: 400px;
+	height: 500px;
+	transition: all 2s;
+	transition: width 0.5s, height 0.5s;
+	transition-delay: 0s, 0.5s;
+	
+} 
+
+#extra_ars.open {
+	text-align: center;
 }
 
 #EleMonstro {
@@ -488,7 +522,31 @@ body .crt .bg {
 	font-weight: bold;
 	float:left;
 	text-align: center;
-	margin: 45px 15px;
+	margin: 45px 5vw;
+	margin-right: 0px;
+}
+
+.table.right {
+	float: right;
+	margin-left: 0px;
+	margin-right: 5vw;
+}
+
+.table.meio {
+	margin-top: 15px;
+	margin: 0 auto;
+	max-width: 75vw;
+	padding: 5vw;
+	float: none;
+}
+
+.table.meio table{
+	width: 100%;
+	margin: 0 auto;
+}
+
+table .catitem {
+	width: 80px;
 }
 
 table {
@@ -501,6 +559,10 @@ table {
 	transition: all 1s !important;
 	line-height: 8px;
 	cursor: pointer;
+}
+
+.patnum {
+	text-alin: center;
 }
 
 tr , tr td {
@@ -564,7 +626,7 @@ thead tr, thead tr th {
 	border: 0px;
 }
 
-tbody tr:not(.munic) td:first-of-type {
+tbody tr:not(.munic) td:not(.patnum):first-of-type {
 	text-align: left;
 	font-weight: bold;
 }
@@ -613,6 +675,12 @@ td.no_top {
 	background-color: #FFFFFFAA;
 	padding: 50px;
 }
+
+
+
+
+
+
 
 @media only screen and (max-width: 680px) {
 	html {
@@ -679,6 +747,12 @@ td.no_top {
 		margin-top: 30px;
 		margin-bottom: 20px;
 	}
+	
+	.table.right {
+		margin: 3px;
+	}
+	
+	
 	
 	table {
 		font-size: 12px !important;
