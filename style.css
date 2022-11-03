@@ -462,6 +462,7 @@ body .crt .bg {
 	height: 380px;
 	background-color: white;
 	box-shadow: 0px 0px 4px gray;
+	text-decoration: none;
 }
 
 .polaroid .img {
@@ -499,6 +500,7 @@ body .crt .bg {
 	bottom: -413px;
 	left: 113px;
 	margin: 13px;
+	margin-bottom: 50px;
 	transform: rotate(-13deg);
 }
 
