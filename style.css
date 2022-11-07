@@ -119,7 +119,6 @@ body .crt .bg {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	
 	opacity: 0.2;
 }
 
@@ -745,10 +744,34 @@ td.no_top {
 	padding: 50px;
 }
 
+div.paranormal {
+	color: var(--ENERGIA);
+	text-shadow: 0px 0px 2px white;
+}
 
+div.paranormal table {
+	background-color: black;
+	
+}
 
+div.paranormal table td {
+	color: white;
+	animation: paranormal 2s linear infinite;
+}
 
+div.paranormal table tr:hover td {
+	color: black;
+}
 
+@keyframes paranormal {
+	0% {
+		text-shadow: 0px 0px 2px white;
+	} 50% {
+		text-shadow: 0px 0px 2px var(--ENERGIA);
+	} 100% {
+		text-shadow: 0px 0px 2px white;
+	}
+}
 
 
 @media only screen and (max-width: 680px) {
