@@ -8,7 +8,7 @@
 }
 
 body {
-	background-image: linear-gradient(#888888, black) !important;
+	background-image: linear-gradient(white, black) !important;
 	margin: 0px;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;
@@ -114,17 +114,38 @@ a {
 }
 
 body .crt .bg {
-	top: 25vh;
-	left: 25vw;
-	position: absolute;
-	height: 50%;
-	width: 50%;
 	background-image: url("assets/img/ORDO.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	z-index: -1;
+	
 	opacity: 0.2;
+}
+
+#back_logo {
+	top: 18vh;
+	left: 35vw;
+	position: fixed;
+	width: 30vw;
+	z-index: -5;
+	filter: invert(1);
+	mix-blend-mode: difference;
+}
+
+#info_msg {
+	z-index: -4;
+	position: fixed;
+	left: 32vw;
+	top: 45vh;
+	transform: rotate(-30deg);
+	font-family: Estrangeiro;
+	font-size: 7vw;
+	color: white;
+	mix-blend-mode: difference;
+}
+
+body .crt img {
+	mix-blend-mode: difference;
 }
 
 #heads {
@@ -159,14 +180,10 @@ body .crt .bg {
 }
 
 .crt span {
-	font-family: Estrangeiro;
-	font-size: 7vw;
-	color: white;
+	
 	position: absolute;
-	left: 32vw;
-	top: 42vh;
-	transform: rotate(-30deg);
-	opacity: 0.7;
+	
+	
 }
 
 #menu {
@@ -575,7 +592,6 @@ body .crt .bg {
 
 .table.half {
 	width: 100%;
-	
 }
 
 .table.half div:first-of-type {
@@ -610,7 +626,6 @@ table {
 	margin: 15px 0px;
 	background-color: #FFFFFFDD;
 	transition: all 1s !important;
-	line-height: 8px;
 	cursor: pointer;
 }
 
@@ -858,7 +873,10 @@ td.no_top {
 	.table.half div table {
 		width: 100%;
 		margin: 0px;
+		display: table;
 	}
+	
+	
 }
 
 
