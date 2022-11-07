@@ -13,6 +13,7 @@ body {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;
 	overflow: scroll;
+	height: 100vh;
 }
 
 body::-webkit-scrollbar {
