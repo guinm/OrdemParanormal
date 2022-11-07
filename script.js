@@ -21,3 +21,8 @@ function OpenArsenal() {
 	  bt.classList.toggle("open");
   }
 }
+
+function Rituais() {
+	var element = document.getElementsByClassName("morte");
+	element.classList.toggle("display");
+}

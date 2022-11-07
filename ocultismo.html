@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="crt.css">-->
+	<link href="/assets/fonts/OutroLado_Regular.ttf" rel='stylesheet' type='text/css'>
+	
+	<script src="script.js"></script>
+	<link rel="icon" href="assets/img/ORDO.png">
+	
+	<meta http-equiv="refresh" content="9999999999" >
+	<title>Ordem Paranormal</title>
+</head>
+
+<body class="ocultismo">
+	
+	<img id="back_logo" src="assets/img/ORDO.png">
+	<span id="info_msg">em breve</span>
+	
+	<div id="menu" >
+	
+		<button href="#" onclick="OpenMenu()"></button>
+		<div id="opcs">
+			<a href="bestiario.html"><div id="opc1">Bestiário</div></a><br>
+			<a href="index.html"><div id="opc2">Ordem</div></a><br>
+			<a href="homebrew.html"><div id="opc3">Homebrew</div></a>
+		</div>
+	</div>
+	
+	<div id="selector">
+				<input type="checkbox" id="conhecimento" name="conhecimento" value="conhecimento">
+				<label id="label_con" for="conhecimento">CONHECIMENTO</label>
+			
+				<input type="checkbox" id="sangue" name="sangue" value="sangue" onclick="Rituais()">
+				<label id="label_san" for="sangue">SANGUE</label>
+			
+				<input type="checkbox" id="morte" name="morte" value="morte">
+				<label id="label_mor" for="morte">MORTE</label>
+			
+				<input type="checkbox" id="energia" name="energia" value="energia">
+				<label id="label_ene" for="energia">ENERGIA</label>
+	</div>
+	
+	<div id="rituais">
+		<div class="card ritual morte">
+			<h2>Cicatrização</h2>
+			<div class="text">
+			<span>Execução: </span>Padrão<br>
+			<span>Alcance: </span>Toque<br>
+			<span>Alvo: </span>1 ser<br>
+			<span>Duração: </span>Instantânea<br>
+			<p>Você acelera o tempo ao redor das feridas do alvo, que cicatrizam instantaneamente. O alvo recupera 3d8+3 PV, mas envelhece 1 ano automaticamente. </p>
+			<p class="discente"><span>Discente (+2 PE): </span>aumenta a cura para 5d8+5 PV. Requer 2º círculo.</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o alcance para “curto”, o alvo para “seres escolhidos” e aumenta a cura para 7d8+7 PV. Requer 4º círculo e afinidade com Morte.</p>
+			</div>
+			<div class="roll">NORMAL</div>
+			<div class="roll">DISCENTE</div>
+			<div class="roll">VERDADEIRO</div>
+			
+		</div>
+	</div>	
+</body>	

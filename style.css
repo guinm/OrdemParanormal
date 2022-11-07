@@ -7,8 +7,17 @@
   --SANGUE: #b1161a;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
-	background-image: linear-gradient(white, black) !important;
+	background-image: linear-gradient(white, black);
 	margin: 0px;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;
@@ -18,6 +27,10 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+body.ocultismo {
+	background-image: linear-gradient(WHITE, var(--SANGUE)) !important;
 }
 
 a {
@@ -775,6 +788,152 @@ div.paranormal table tr:hover td {
 		text-shadow: 0px 0px 2px white;
 	}
 }
+
+#selector {
+	background-color: black;
+	height: 60px;
+	width: 100vw;
+	text-align: center;
+	color: white;
+}
+
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+input[type="checkbox"] + label {
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid white;
+	color: white;
+	margin-bottom: 10px;
+	z-index: 6;
+	font-family: Ordem;
+	margin: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+  border: 1px solid white;
+  color: white;
+}
+
+#label_con, #label_san, #label_mor, #label_ene{
+	overflow: hidden;
+}
+
+#label_con::after,
+#label_san::after,
+#label_mor::after,
+#label_ene::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	z-index: -1;
+	transition: top 1s;
+}
+
+#label_con::after {
+	background-color: var(--CONHECIMENTO);
+}
+
+#label_san::after {
+	background-color: var(--SANGUE);
+}
+
+#label_mor::after {
+	background-color: GRAY;
+}
+
+#label_ene::after {
+	background-color: var(--ENERGIA);
+}
+
+input[type="checkbox"]:checked + #label_con::after,  
+input[type="checkbox"]:checked + #label_san::after, 
+input[type="checkbox"]:checked + #label_mor::after, 
+input[type="checkbox"]:checked + #label_ene::after {
+	top: 0px;
+}
+
+#rituais {
+	margin: 75px;
+	width: calc(100vw - 150px);
+}
+
+#rituais .card {
+	padding: 10px;
+	width: 30%;
+	text-align: center;
+	background-color: white;
+}
+
+#rituais .card h2 {
+	font-size: 26px;
+	font-family: Ordem;
+	position: relative;
+	line-height: 60px;
+	margin-top: 0px;
+}
+
+#rituais .card h2::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    background-size: contain;
+    background-repeat: no-repeat;
+	top: 0px;
+	left: 15px;
+}
+
+#rituais .card.morte h2::before {
+	background-image: url("assets/img/elementos/MORTE.png");
+}
+
+#rituais .card h2::after {
+	content: "";
+    position: absolute;
+	width: 95%;
+	
+	bottom: 0px;
+	left: 2.5%;
+}
+
+#rituais .card.morte h2::after {
+	border-bottom: 2px solid black;
+}
+
+.text {
+	text-align: justify;
+	width: 100%;
+	font-family: Arial;
+}
+
+.text span {
+	font-size: 18px;
+	color: var(--SANGUE);
+	margin-bottom: 5px;
+}
+
+.roll {
+	display: inline-block;
+	padding: 15px;
+	width: calc(33% - 32px);
+}
+
+.card.morte .roll {
+	background-color: black;
+	color: white;
+}
+
 
 
 @media only screen and (max-width: 680px) {
