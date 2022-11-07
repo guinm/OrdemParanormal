@@ -751,7 +751,10 @@ div.paranormal {
 
 div.paranormal table {
 	background-color: black;
-	
+}
+
+div.paranormal table th {
+	background-color: white;
 }
 
 div.paranormal table td {
@@ -911,7 +914,13 @@ div.paranormal table tr:hover td {
 		display: table;
 	}
 	
+	div.table.paranormal {
+		width: 100vw;	
+	}
 	
+	div.table.paranormal table {
+		width: 100%;
+	}
 }
 
 
