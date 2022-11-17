@@ -24,14 +24,27 @@ body {
 	overflow: scroll;
 	height: 100vh;
 	overflow-x: hidden;
+	transition: background 1s linear;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-body.ocultismo {
+body.sangue {
 	background-image: linear-gradient(WHITE, var(--SANGUE)) !important;
+}
+
+body.morte {
+	background-image: linear-gradient(white, black);
+}
+
+body.conhecimento {
+	background-image: linear-gradient(WHITE, var(--CONHECIMENTO)) !important;
+}
+
+body.energia {
+	background-image: linear-gradient(WHITE, var(--ENERGIA)) !important;
 }
 
 a {
@@ -792,7 +805,7 @@ div.paranormal table tr:hover td {
 
 #selector {
 	background-color: black;
-	height: 60px;
+	height: 50px;
 	width: 100vw;
 	text-align: center;
 	color: white;
@@ -807,7 +820,7 @@ input[type="checkbox"]:checked {
 input[type="checkbox"] + label {
 	position: relative;
 	display: inline-block;
-	padding: 10px;
+	padding: 5px;
 	cursor: pointer;
 	border: 1px solid white;
 	color: white;
@@ -866,6 +879,7 @@ input[type="checkbox"]:checked + #label_ene::after {
 #rituais {
 	margin: 75px;
 	width: calc(100vw - 150px);
+	display: flex;	
 }
 
 #rituais .card {
@@ -873,6 +887,10 @@ input[type="checkbox"]:checked + #label_ene::after {
 	width: 30%;
 	text-align: center;
 	background-color: white;
+	position: relative;
+	float: left;
+	margin-left: 30px;
+	box-shadow: 0px 5px 5px #00000077;
 }
 
 #rituais .card h2 {
@@ -899,13 +917,37 @@ input[type="checkbox"]:checked + #label_ene::after {
 	background-image: url("assets/img/elementos/MORTE.png");
 }
 
+#rituais .card.sangue h2::before {
+	background-image: url("assets/img/elementos/SANGUE.png");
+	filter: drop-shadow(2px 2px 2px black);
+}
+
 #rituais .card h2::after {
 	content: "";
     position: absolute;
 	width: 95%;
-	
 	bottom: 0px;
 	left: 2.5%;
+}
+
+#bg_change {
+	position: absolute;
+	right: 15px;
+	top: 0px;
+	line-height: 50px;
+	font-size: 22px;
+}
+
+#bg_change:hover {
+	animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	} 100% {
+		transform: rotate(360deg);
+	}
 }
 
 #rituais .card.morte h2::after {
@@ -933,9 +975,31 @@ input[type="checkbox"]:checked + #label_ene::after {
 .card.morte .roll {
 	background-color: black;
 	color: white;
+	width: 31%;
+	border: none;
+	padding: 15px 0px;
 }
 
+.card.no_display {
+	display: none;
+}
 
+.morte .nivel {
+	background-color: black;
+	color: white;
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+#extra_ {
+	display: none;
+}
 
 @media only screen and (max-width: 680px) {
 	html {
@@ -1081,39 +1145,50 @@ input[type="checkbox"]:checked + #label_ene::after {
 	div.table.paranormal table {
 		width: 100%;
 	}
+	
+	#selector {
+		height: auto;
+		position: relative;
+		top: -31.4%;
+		transition: all 0.5s;
+	}
+	
+	#selector.open {
+		top: 0;
+	}
+	
+	#selector label {
+		padding: 10px 0px;
+		width: 90vw;
+		margin: 5px 5%;
+		
+	}
+	
+	#selector label:first-of-type {
+		margin-top: 60px;
+	}
+	
+	#rituais {
+		width: 100vw;
+		margin: 20px 0px;
+	}
+	
+	#rituais .card.ritual {
+		width: calc(100% - 20px);
+	}
+	
+	#extra_ {
+		display: block;
+		width: 100vw;
+		line-height: 50px;
+		transform: rotate(180deg);
+		transition: transform 0.5s;
+	}
+	
+	#selector.open #extra_ {
+		transform: rotate(360deg);
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

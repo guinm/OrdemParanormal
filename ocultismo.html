@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="stylesheet" href="style.css">
 	<!--<link rel="stylesheet" href="crt.css">-->
 	<link href="/assets/fonts/OutroLado_Regular.ttf" rel='stylesheet' type='text/css'>
@@ -10,11 +11,13 @@
 	<script src="script.js"></script>
 	<link rel="icon" href="assets/img/ORDO.png">
 	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
 	<meta http-equiv="refresh" content="9999999999" >
 	<title>Ordem Paranormal</title>
 </head>
 
-<body class="ocultismo">
+<body class="sangue">
 	
 	<img id="back_logo" src="assets/img/ORDO.png">
 	<span id="info_msg">em breve</span>
@@ -30,22 +33,28 @@
 	</div>
 	
 	<div id="selector">
-				<input type="checkbox" id="conhecimento" name="conhecimento" value="conhecimento">
-				<label id="label_con" for="conhecimento">CONHECIMENTO</label>
-			
-				<input type="checkbox" id="sangue" name="sangue" value="sangue" onclick="Rituais()">
-				<label id="label_san" for="sangue">SANGUE</label>
-			
-				<input type="checkbox" id="morte" name="morte" value="morte">
-				<label id="label_mor" for="morte">MORTE</label>
-			
-				<input type="checkbox" id="energia" name="energia" value="energia">
-				<label id="label_ene" for="energia">ENERGIA</label>
+		<input type="checkbox" id="conhecimento" name="conhecimento" value="conhecimento" onclick="Rituais(this)">
+		<label id="label_con" for="conhecimento">CONHECIMENTO</label>
+	
+		<input type="checkbox" id="sangue" name="sangue" value="sangue" onclick="Rituais(this)">
+		<label id="label_san" for="sangue">SANGUE</label>
+	
+		<input type="checkbox" id="morte" name="morte" value="morte" onclick="Rituais(this)">
+		<label id="label_mor" for="morte">MORTE</label>
+	
+		<input type="checkbox" id="energia" name="energia" value="energia" onclick="Rituais(this)">
+		<label id="label_ene" for="energia">ENERGIA</label>
+				
+		<i id="bg_change" class="fa-solid fa-gear" value="sangue" onClick="bg_Change()"></i>
+		
+		<i id="extra_" class="fa-solid fa-chevron-up" onClick="select_change()"></i>
 	</div>
 	
 	<div id="rituais">
-		<div class="card ritual morte">
-			<h2>Cicatrização</h2>
+	
+		<div class="card ritual sangue no_display">
+			<h2>TESTE</h2>
+			<div class="nivel">1</div>
 			<div class="text">
 			<span>Execução: </span>Padrão<br>
 			<span>Alcance: </span>Toque<br>
@@ -55,10 +64,21 @@
 			<p class="discente"><span>Discente (+2 PE): </span>aumenta a cura para 5d8+5 PV. Requer 2º círculo.</p>
 			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o alcance para “curto”, o alvo para “seres escolhidos” e aumenta a cura para 7d8+7 PV. Requer 4º círculo e afinidade com Morte.</p>
 			</div>
-			<div class="roll">NORMAL</div>
-			<div class="roll">DISCENTE</div>
-			<div class="roll">VERDADEIRO</div>
-			
 		</div>
+	
+		<div class="card ritual morte no_display">
+			<h2>Cicatrização</h2>
+			<div class="nivel">1</div>
+			<div class="text">
+			<span>Execução: </span>Padrão<br>
+			<span>Alcance: </span>Toque<br>
+			<span>Alvo: </span>1 ser<br>
+			<span>Duração: </span>Instantânea<br>
+			<p>Você acelera o tempo ao redor das feridas do alvo, que cicatrizam instantaneamente. O alvo recupera 3d8+3 PV, mas envelhece 1 ano automaticamente. </p>
+			<p class="discente"><span>Discente (+2 PE): </span>aumenta a cura para 5d8+5 PV. Requer 2º círculo.</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o alcance para “curto”, o alvo para “seres escolhidos” e aumenta a cura para 7d8+7 PV. Requer 4º círculo e afinidade com Morte.</p>
+			</div>
+		</div>
+		
 	</div>	
 </body>	
