@@ -1052,7 +1052,7 @@ input[type="checkbox"]:checked + #label_ene::after {
 	color: white;
 }
 
-card.ritual.morte div span{
+.card.ritual.morte div span{
 	color: black;
 }
 
@@ -1064,7 +1064,7 @@ card.ritual.morte div span{
 	color: var(--CONHECIMENTO);
 }
 
-card.ritual.energia div span{
+.card.ritual.energia div span{
 	color: var(--ENERGIA);
 }
 
