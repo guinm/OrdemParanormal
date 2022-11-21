@@ -24,6 +24,7 @@ body {
 	overflow: scroll;
 	overflow-x: hidden;
 	transition: background 1s linear;
+	min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -1255,7 +1256,7 @@ card.ritual.energia div span{
 	#selector {
 		height: auto;
 		position: relative;
-		top: -31.4%;
+		top: -267px;
 		transition: all 0.5s;
 		z-index: 49;
 	}
@@ -1276,6 +1277,7 @@ card.ritual.energia div span{
 	}
 	
 	#rituais {
+		display: inherit;
 		position: relative;
 		top: -300px;
 		width: 100vw;
@@ -1283,9 +1285,13 @@ card.ritual.energia div span{
 	}
 	
 	#rituais .card.ritual {
-		min-width: calc(100% - 20px);
+		min-width: calc(100% - 19px);
 		margin: 0px;
 		margin-top: 25px;
+	}
+	
+	#rituais .card.ritual:first-of-type {
+		box-shadow: 0px 0px 10px black;
 	}
 	
 	#extra_ {
