@@ -22,7 +22,6 @@ body {
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;
 	overflow: scroll;
-	height: 100vh;
 	overflow-x: hidden;
 	transition: background 1s linear;
 }
@@ -878,18 +877,24 @@ input[type="checkbox"]:checked + #label_ene::after {
 
 #rituais {
 	margin: 75px;
-	width: calc(100vw - 150px);
+	width: calc(100vw - 100px);
 	display: flex;	
+	flex-flow: row wrap;
+}
+
+#rituais.all_off {
+	min-height: 81.5vh;
 }
 
 #rituais .card {
 	padding: 10px;
-	width: 30%;
+	max-width: 27vw;
+	min-width: 450px;
 	text-align: center;
 	background-color: white;
 	position: relative;
-	float: left;
-	margin-left: 30px;
+	flex: 1;
+	margin: 0px 0px 30px 30px;
 	box-shadow: 0px 5px 5px #00000077;
 }
 
@@ -920,6 +925,21 @@ input[type="checkbox"]:checked + #label_ene::after {
 #rituais .card.sangue h2::before {
 	background-image: url("assets/img/elementos/SANGUE.png");
 	filter: drop-shadow(2px 2px 2px black);
+}
+
+#rituais .card.energia h2::before {
+	background-image: url("assets/img/elementos/ENERGIA.png");
+}
+
+#rituais .card.conhecimento h2::before {
+	background-image: url("assets/img/elementos/CONHECIMENTO.png");
+}
+
+#rituais .card.conhecimento.energia.morte.sangue h2::before {
+	background-image: url("assets/img/elementos/CONHECIMENTO.png"), url("assets/img/elementos/ENERGIA.png"), url("assets/img/elementos/MORTE.png"), url("assets/img/elementos/SANGUE.png");
+	background-position: left top, right top, left bottom, right bottom;
+	background-size: 50%;
+	filter: drop-shadow(2px 2px 2px white);
 }
 
 #rituais .card h2::after {
@@ -954,6 +974,18 @@ input[type="checkbox"]:checked + #label_ene::after {
 	border-bottom: 2px solid black;
 }
 
+#rituais .card.sangue h2::after {
+	border-bottom: 2px solid var(--SANGUE);
+}
+
+#rituais .card.conhecimento h2::after {
+	border-bottom: 2px solid var(--CONHECIMENTO);
+}
+
+#rituais .card.energia h2::after {
+	border-bottom: 2px solid var(--ENERGIA);
+}
+
 .text {
 	text-align: justify;
 	width: 100%;
@@ -962,7 +994,6 @@ input[type="checkbox"]:checked + #label_ene::after {
 
 .text span {
 	font-size: 18px;
-	color: var(--SANGUE);
 	margin-bottom: 5px;
 }
 
@@ -984,9 +1015,12 @@ input[type="checkbox"]:checked + #label_ene::after {
 	display: none;
 }
 
-.morte .nivel {
-	background-color: black;
-	color: white;
+#rituais .card h2.small {
+	font-size: 1.30em;
+}
+
+.card .nivel {
+	cursor: pointer;
 	height: 35px;
 	width: 35px;
 	line-height: 35px;
@@ -995,6 +1029,78 @@ input[type="checkbox"]:checked + #label_ene::after {
 	right: 25px;
 	-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.card.morte .nivel {
+	background-color: black;
+	color: white;
+}
+
+.card.sangue .nivel {
+	background-color: var(--SANGUE);
+	color: white;
+}
+
+.card.conhecimento .nivel {
+	background-color: var(--CONHECIMENTO);
+	color: black;
+}
+
+.card.energia .nivel {
+	background-color: var(--ENERGIA);
+	color: white;
+}
+
+card.ritual.morte div span{
+	color: black;
+}
+
+.card.ritual.sangue div span{
+	color: var(--SANGUE);
+}
+
+.card.ritual.conhecimento span{
+	color: var(--CONHECIMENTO);
+}
+
+card.ritual.energia div span{
+	color: var(--ENERGIA);
+}
+
+.card.ritual.conhecimento.energia.morte.sangue span {
+	animation: todas_cores_text 4s infinite linear;
+}
+
+.card.ritual.conhecimento.energia.morte.sangue .nivel {
+	animation: todas_cores_dice 4s infinite linear;
+}
+
+@keyframes todas_cores_text {
+	0% {
+		color: var(--CONHECIMENTO);
+	} 25% {
+		color: var(--ENERGIA);
+	} 50% {
+		color: black;
+	} 75% {
+		color: var(--SANGUE);
+	} 100% {
+		color: var(--CONHECIMENTO);
+	}
+}
+
+@keyframes todas_cores_dice {
+	0% {
+		background-color: var(--ENERGIA);
+	} 25% {
+		background-color: black;
+	} 50% {
+		background-color: var(--SANGUE);
+	} 75% {
+		background-color: var(--CONHECIMENTO);
+	} 100% {
+		background-color: var(--ENERGIA);
+	}
 }
 
 #extra_ {
@@ -1151,6 +1257,7 @@ input[type="checkbox"]:checked + #label_ene::after {
 		position: relative;
 		top: -31.4%;
 		transition: all 0.5s;
+		z-index: 49;
 	}
 	
 	#selector.open {
@@ -1169,12 +1276,16 @@ input[type="checkbox"]:checked + #label_ene::after {
 	}
 	
 	#rituais {
+		position: relative;
+		top: -300px;
 		width: 100vw;
-		margin: 20px 0px;
+		margin: 50px 0px;
 	}
 	
 	#rituais .card.ritual {
-		width: calc(100% - 20px);
+		min-width: calc(100% - 20px);
+		margin: 0px;
+		margin-top: 25px;
 	}
 	
 	#extra_ {

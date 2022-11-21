@@ -50,19 +50,121 @@
 		<i id="extra_" class="fa-solid fa-chevron-up" onClick="select_change()"></i>
 	</div>
 	
-	<div id="rituais">
+	<div id="rituais" class="all_off">
 	
-		<div class="card ritual sangue no_display">
-			<h2>TESTE</h2>
+		<div class="card ritual conhecimento energia morte sangue no_display">
+			<h2>Amaldiçoar Arma</h2>
 			<div class="nivel">1</div>
 			<div class="text">
 			<span>Execução: </span>Padrão<br>
 			<span>Alcance: </span>Toque<br>
-			<span>Alvo: </span>1 ser<br>
-			<span>Duração: </span>Instantânea<br>
-			<p>Você acelera o tempo ao redor das feridas do alvo, que cicatrizam instantaneamente. O alvo recupera 3d8+3 PV, mas envelhece 1 ano automaticamente. </p>
-			<p class="discente"><span>Discente (+2 PE): </span>aumenta a cura para 5d8+5 PV. Requer 2º círculo.</p>
-			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o alcance para “curto”, o alvo para “seres escolhidos” e aumenta a cura para 7d8+7 PV. Requer 4º círculo e afinidade com Morte.</p>
+			<span>Alvo: </span>1 arma corpo a corpo ou pacote de munição<br>
+			<span>Duração: </span>cena<br>
+			
+			<p>Quando aprender este ritual, escolha um elemento entre Conhecimento, Energia, Morte e Sangue. Este ritual passa a ser do elemento escolhido. Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento.
+			</p>
+			<p class="discente"><span>Discente (+2 PE): </span>muda o bônus de dano para +2d6. Requer 2º círculo.</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o bônus de dano para +4d6. Requer 3º círculo e afinidade.</p>
+			</div>
+		</div>
+	
+		<div class="card ritual conhecimento no_display">
+			<h2 class="small">Compreensão Paranormal</h2>
+			<div class="nivel">1</div>
+			<div class="text">
+			<span>Execução: </span>Padrão<br>
+			<span>Alcance: </span>Toque<br>
+			<span>Alvo: </span>1 ser ou objeto<br>
+			<span>Duração: </span>cena<br>
+			<span>Resistência: </span>: Vontade anula (veja texto)<br>
+			<p>O ritual confere a você compreensão sobrenatural da linguagem. Se tocar um objeto contendo informação (ou livro, um dispositivo com uma gravação...), você entende as palavras mesmo que não conheça seu idioma, contanto que se trate de um idioma humano (não funciona com símbolos ou sigilos paranormais). Se tocar uma pessoa, pode se comunicar com ela como se falassem um idioma em comum. Se tocar um ser não inteligente, como um animal, pode perceber seus sentimentos básicos, como medo ou felicidade. Um alvo involuntário tem direito a um teste de Vontade.
+			</p>
+			<p class="discente"><span>Discente (+2 PE): </span>muda o alcance para “curto” e o alvo para “alvos escolhidos”. Você pode entender todos os alvos afetados. Requer 2º círculo</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>muda o alcance para “pessoal” e o alvo para “você”. Em vez do normal, você pode falar, entender e escrever qualquer idioma humano. Requer 3º círculo.</p>
+			</div>
+		</div>
+		
+		<div class="card ritual conhecimento no_display">
+			<h2 class="small">Enfeitiçar</h2>
+			<div class="nivel">1</div>
+			<div class="text">
+			<span>Execução: </span>Padrão<br>
+			<span>Alcance: </span>curto<br>
+			<span>Alvo: </span>1 pessoa<br>
+			<span>Duração: </span>cena<br>
+			<span>Resistência: </span>: Vontade anula<br>
+			<p>
+			Este ritual torna o alvo prestativo (veja a página 45). Ele
+			não fica sob seu controle, mas percebe suas palavras e
+			ações da maneira mais favorável possível. Você recebe
+			um bônus de +10 em testes de Diplomacia com ele.
+			Um alvo hostil ou que esteja envolvido em combate
+			recebe +5 em seu teste de resistência. Se você ou seus
+			aliados tomarem qualquer ação hostil contra o alvo, o
+			efeito é dissipado e o alvo retorna à atitude que tinha
+			antes (ou piorada, de acordo com o mestre).
+			</p>
+			<p class="discente"><span>Discente (+2 PE): </span>
+			em vez do normal, você sugere
+			uma ação para o alvo e ele obedece. A sugestão deve
+			ser feita de modo que pareça aceitável, a critério do
+			mestre. Pedir que o alvo atire em seu companheiro, por
+			exemplo, dissipa o efeito. Já sugerir a um guarda que
+			descanse um pouco, de modo que você e seus aliados
+			passem por ele, é aceitável. Quando o alvo executa
+			a ação, o efeito termina. Você pode determinar uma
+			condição específica para a sugestão: por exemplo, que
+			o policial prenda a próxima pessoa de casaco verde
+			que ele encontrar. Requer 2º círculo.
+			</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>
+			afeta todos os alvos dentro do
+			alcance. Requer 3º círculo.
+
+			</p>
+			</div>
+		</div>
+		
+		<div class="card ritual conhecimento no_display">
+			<h2 class="small">Perturbação</h2>
+			<div class="nivel">1</div>
+			<div class="text">
+			<span>Execução: </span>Padrão<br>
+			<span>Alcance: </span>curto<br>
+			<span>Alvo: </span>1 pessoa<br>
+			<span>Duração: </span>1 rodada<br>
+			<span>Resistência: </span>: Vontade anula<br>
+			<p>
+				Você dá uma ordem que o alvo deve ser capaz de ouvir
+				(mas não precisa entender). Se falhar na resistência,
+				ele deve obedecer à ordem em seu próprio turno da
+				melhor maneira possível. Escolha um dos efeitos
+				<p><span>Fuja:</span>O alvo gasta seu turno tentando se afastar de
+você (usando todas as suas ações).</p>
+				<p><span>Largue: </span>O alvo solta quaisquer itens que esteja segurando e não pode pegá-los novamente até o início
+de seu próximo turno. Como esta é uma ação livre,
+ele ainda pode executar outras ações (exceto pegar
+aquilo que largou)</p>
+				<p><span>Pare: </span>O alvo fica pasmo (não pode realizar ações,
+só reações).</p>
+				<p><span>Sente-se: </span>Com uma ação livre, o alvo se senta no chão
+(se estava pendurado ou voando, desce até o chão). Ele pode fazer outras ações, mas não se levantar até
+o início de seu próximo turno.</p>
+				<p><span>Venha: </span>O alvo gasta seu turno se aproximando de
+você (usando todas as suas ações).</p>
+			</p>
+			<p class="discente"><span>Discente (+2 PE): </span>
+			muda o alvo para “1 ser” e adiciona
+o seguinte comando: “Sofra. O alvo é acometido de
+dor aguda, sofrendo 3d8 pontos de dano de Conhecimento e ficando abalado por uma rodada”.
+			</p>
+			<p class="verdadeiro"><span>Verdadeiro (+9 PE)</span>
+			muda o alvo para “até 5 seres” ou
+adiciona o seguinte comando: “Ataque. O alvo deve
+fazer a ação agredir contra um outro alvo a sua escolha
+em alcance médio, com todas as suas capacidades”.
+Requer 3º círculo e afinidade.</p>
+			
 			</div>
 		</div>
 	
