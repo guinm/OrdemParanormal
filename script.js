@@ -30,6 +30,8 @@ function Rituais(elemento) {
 	
 	var rituais = document.getElementsByClassName("ritual");
 	
+	var ritu = document.getElementById("rituais");
+	
 	for ( var i = 0; i < rituais.length; ++i ) {
 		if ((rituais[i].classList.contains("morte") && morte.checked == true) || 
 		(rituais[i].classList.contains("sangue") && sangue.checked == true) || 
@@ -39,6 +41,12 @@ function Rituais(elemento) {
 		} else {
 			rituais[i].classList.add("no_display");
 		}			
+	}
+	
+	if ((conhecimento.checked == false) && (sangue.checked == false) && (morte.checked == false) && (energia.checked == false)) {
+		ritu.classList.add("all_off");
+	} else {
+		ritu.classList.remove("all_off");
 	}
 }
 

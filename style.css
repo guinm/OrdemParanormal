@@ -47,6 +47,32 @@ body.energia {
 	background-image: linear-gradient(WHITE, var(--ENERGIA)) !important;
 }
 
+#changelog {
+	position: absolute;
+	z-index: 101;
+	top: 150px;
+	left: calc(70vw);
+	padding: 30px 15px 0px 15px;
+	background-color: white;
+	text-align: center;
+	border: 1px solid #d3d3d3;
+	mix-blend-mode: difference;
+	font-weight: 900;
+	font-family: Ordem;
+}
+
+#changelogheader {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: calc(100% - 20px);
+	padding: 10px;
+	cursor: move;
+	z-index: 102;
+	background-color: #cb5607;
+	color: #000;
+}
+
 a {
 	color: black;
 	cursor: pointer;
@@ -1018,6 +1044,39 @@ input[type="checkbox"]:checked + #label_ene::after {
 
 #rituais .card h2.small {
 	font-size: 1.30em;
+}
+
+d20 {
+	padding: 4px;
+	-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.card.morte d20 {
+	font-size: 0.8em;
+	display: inline;
+	background-color: black;
+	color: white;
+	
+}
+
+.card.energia d20{
+	font-size: 0.8em;
+	display: inline;
+	background-color: var(--ENERGIA);
+}
+
+.card.conhecimento d20 {
+	font-size: 0.8em;
+	display: inline;
+	background-color: var(--CONHECIMENTO);
+	color: black;
+}
+
+.card.sangue d20 {
+	font-size: 0.8em;
+	display: inline;
+	background-color: var(--SANGUE);
 }
 
 .card .nivel {
