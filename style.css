@@ -1061,6 +1061,7 @@ d20 {
 }
 
 .card.energia d20{
+	color: white;
 	font-size: 0.8em;
 	display: inline;
 	background-color: var(--ENERGIA);
@@ -1074,6 +1075,7 @@ d20 {
 }
 
 .card.sangue d20 {
+	color: white;
 	font-size: 0.8em;
 	display: inline;
 	background-color: var(--SANGUE);
